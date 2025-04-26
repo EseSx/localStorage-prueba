@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+/* Haciendo este proyecto descubri cosas interesantes sobre css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"); /* TIP: Se pueden importar fuentes directamente desde google fonts, el apartado "family=???" puede modificar que fuente se importa, el apartado "wght@???;???" permite asignar los valores que tendran estas fuentes en cuanto a "peso", el valor "display=swap" hace que la fuente se intercambie solo cuando se pueda cargar */
+
+/* Nota1: Estoy re emocionado escuchando "Seek & Destroy - Remastered" temon de rock, escuchenlo */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif; /* TIP: "sans-serif" es una fuente de reemplazo que se utilizara si la primera fuente no se puede cargar, significa sin serif */
   font-weight: 400;
 }
 
 body {
-  height: 100vh;
+  height: 100vh; /* TIP: "vh" es un valor basado en el tamaño visible de la pagina en porcentaje: 100vh = 100% de la pagina visible */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +22,8 @@ body {
 
 .contenedor {
   background-color: #1e1e1e;
-  padding: 2rem 2.5rem;
+  padding: 2rem 2.5rem; /* TIP: "rem" es un valor basado en el tamaño base de la fuente en la pagina: 2rem = tamañoBaseFuente * 2 */
+  /* Nota3: Me motive escuchando "I Will Survive" */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -52,15 +56,15 @@ label {
 }
 
 #botonEnviar {
-padding: 0.7rem;
-border: none;
-border-radius: 8px;
-background-color: #6c63ff;
-color: #fff;
-font-weight: 600;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6c63ff;
+  color: #fff;
+  font-weight: 600;
 }
 
-#botonVer{
+#botonVer {
   border: none;
   border-radius: 8px;
   background-color: #6c63ff;
@@ -72,11 +76,11 @@ font-weight: 600;
   width: 2rem;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-.filaContraseña{
+.filaContraseña {
   display: flex;
   align-items: center;
 }
