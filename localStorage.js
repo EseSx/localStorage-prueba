@@ -21,17 +21,23 @@ botonEnviar.addEventListener("click", () => {
   if (!inputUsuario.value || !contraseña.value) {
     alert("Ingrese los datos solicitados");
   } else {
-    alert("Datos enviados con exito recargue la paguina");
-    const datosDeLogin = new FormData(formulario); // Guarda todos los datos del formulario en una variable
-    const valores = Object.fromEntries(datosDeLogin.entries()); // Convierto los mismos datos en un obejeto con el contructor
-    // TIP: el contructor Object es la opcion mas viable en caso de que los datos sean volatiles o ya esten almacenados en algun otro lado, en caso de sean especificos o que no esten almacenados en ninguna otra variable recominedo crear el objeto de forma literal:
-    // const usuario = {
-    //  "nombre" : "Hasbulla",
-    //  "contraseña" : "noSeYaPerdiLaImaginacion"
-    // }
-    // Nota2: Me estoy deprimiendo escuchando "Forever", me arrepiento de tanto
+    let inputU = inputUsuario.value;
+    let inputC = contraseña.value;
+    if (inputU.toLowerCase() == "clear" && inputC.toLowerCase() == "clear") {
+      localStorage.clear();
+    } else {
+      alert("Datos enviados con exito recargue la paguina");
+      const datosDeLogin = new FormData(formulario); // Guarda todos los datos del formulario en una variable
+      const valores = Object.fromEntries(datosDeLogin.entries()); // Convierto los mismos datos en un obejeto con el contructor
+      // TIP: el contructor Object es la opcion mas viable en caso de que los datos sean volatiles o ya esten almacenados en algun otro lado, en caso de sean especificos o que no esten almacenados en ninguna otra variable recominedo crear el objeto de forma literal:
+      // const usuario = {
+      //  "nombre" : "Hasbulla",
+      //  "contraseña" : "noSeYaPerdiLaImaginacion"
+      // }
+      // Nota2: Me estoy deprimiendo escuchando "Forever", me arrepiento de tanto
 
-    localStorage.setItem("usuario", JSON.stringify(valores)); // Guardo los datos en el localStorage usando la clave "usuario" y convirtiendo "valores" en un string para poder guardar todos los datos
+      localStorage.setItem("usuario", JSON.stringify(valores)); // Guardo los datos en el localStorage usando la clave "usuario" y convirtiendo "valores" en un string para poder guardar todos los datos
+    }
   }
 });
 
